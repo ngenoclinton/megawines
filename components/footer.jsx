@@ -1,4 +1,4 @@
-'use client'
+import Link from "next/link"
 import { ExternalLink, Wine } from "lucide-react"
 import SimpleReveal from "@/components/SimpleReveal"
 
@@ -48,9 +48,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                href="https://thewhiskyshop.co.ke/"
-                  target="_blank" className="text-gray-300 hover:text-orange-400 transition-colors">
+                <Link href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
                   Cart
                 </Link>
               </li>
