@@ -1,6 +1,6 @@
 import "./globals.css"
 import Header from "../components/header"
-import Footer from "../components/Footer"
+import Footer from "../components/footer"
 import AnimationProvider from "@/components/AnimationProvider"
 import Script from "next/script"
 // import LoadingProvider from "@/components/loading-provider"

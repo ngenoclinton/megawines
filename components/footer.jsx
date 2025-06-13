@@ -1,4 +1,4 @@
-import Link from "next/link"
+'use client'
 import { ExternalLink, Wine } from "lucide-react"
 import SimpleReveal from "@/components/SimpleReveal"
 
