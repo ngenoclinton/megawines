@@ -33,9 +33,9 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-yellow-100"
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-orange-100"
           : "bg-white/90 backdrop-blur-sm"
       }`}
     >
@@ -45,11 +45,12 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
               <Image
-                src="/logo.png"
+                src="logo-chalk.png"
                 alt="MegaWines Logo"
-                width={180}
-                height={50}
-                className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                width={200}
+                height={60}
+                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+                priority
               />
             </div>
           </Link>
@@ -64,10 +65,10 @@ export default function Header() {
                 rel={item.external ? "noopener noreferrer" : undefined}
                 className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg group ${
                   item.highlight
-                    ? "bg-gradient-to-r from-yellow-500 to-yellow-600 text-white hover:from-yellow-600 hover:to-yellow-700 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                    ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                     : pathname === item.href
-                      ? "text-yellow-700 bg-yellow-50"
-                      : "text-gray-700 hover:text-yellow-700 hover:bg-yellow-50"
+                      ? "text-orange-700 bg-orange-50"
+                      : "text-gray-700 hover:text-orange-700 hover:bg-orange-50"
                 }`}
               >
                 <span className="flex items-center">
@@ -75,7 +76,7 @@ export default function Header() {
                   {item.external && <ExternalLink className="ml-1 w-3 h-3" />}
                 </span>
                 {!item.highlight && (
-                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-orange-600 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
                 )}
               </Link>
             ))}
@@ -84,7 +85,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:text-yellow-700 hover:bg-yellow-50 transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg text-gray-700 hover:text-orange-700 hover:bg-orange-50 transition-colors duration-200"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -106,7 +107,7 @@ export default function Header() {
 
           {/* Menu Panel */}
           <div
-            className={`relative bg-white shadow-2xl border-t border-yellow-100 transform transition-all duration-300 ease-out ${
+            className={`relative bg-white shadow-2xl border-t border-orange-100 transform transition-all duration-300 ease-out ${
               isMenuOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -119,10 +120,10 @@ export default function Header() {
                   rel={item.external ? "noopener noreferrer" : undefined}
                   className={`mobile-menu-item block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
                     item.highlight
-                      ? "bg-gradient-to-r from-yellow-500 to-yellow-600 text-white shadow-md"
+                      ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-md"
                       : pathname === item.href
-                        ? "text-yellow-700 bg-yellow-50 border-l-4 border-yellow-600"
-                        : "text-gray-700 hover:text-yellow-700 hover:bg-yellow-50"
+                        ? "text-orange-700 bg-orange-50 border-l-4 border-orange-600"
+                        : "text-gray-700 hover:text-orange-700 hover:bg-orange-50"
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                   onClick={() => setIsMenuOpen(false)}

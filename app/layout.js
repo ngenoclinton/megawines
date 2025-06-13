@@ -1,10 +1,9 @@
-import { Inter } from "next/font/google"
 import "./globals.css"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import LoadingProvider from "@/components/loading-provider"
-
-const inter = Inter({ subsets: ["latin"] })
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import AnimationProvider from "@/components/AnimationProvider"
+import Script from "next/script"
+// import LoadingProvider from "@/components/loading-provider"
 
 export const metadata = {
   title: "MegaWines - Fine Alcohol Importer in Kenya",
@@ -14,13 +13,30 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        <LoadingProvider>
-          <Header />
-          <main className="min-h-screen pt-20">{children}</main>
-          <Footer />
-        </LoadingProvider>
+    <html lang="en">
+      <body className="antialiased">
+        {/* <LoadingProvider> */}
+          <AnimationProvider>
+            <Header />
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+          </AnimationProvider>
+        {/* </LoadingProvider> */}
+
+        {/* Add a small script to ensure animations work */}
+        <Script id="animation-fix">
+          {`
+            document.addEventListener('DOMContentLoaded', function() {
+              setTimeout(function() {
+                document.querySelectorAll('.reveal-element, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade, .text-reveal').forEach(function(el) {
+                  if (el.getBoundingClientRect().top < window.innerHeight) {
+                    el.classList.add('revealed');
+                  }
+                });
+              }, 300);
+            });
+          `}
+        </Script>
       </body>
     </html>
   )
