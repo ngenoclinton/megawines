@@ -6,6 +6,9 @@ export default function SimpleReveal({ children, className = "", delay = 0, thre
   const ref = useRef(null)
 
   useEffect(() => {
+    // Ensure we're in the browser
+    if (typeof window === "undefined") return
+
     const element = ref.current
     if (!element) return
 

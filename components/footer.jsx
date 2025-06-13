@@ -48,7 +48,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
+                <Link 
+                href="https://thewhiskyshop.co.ke/"
+                  target="_blank" className="text-gray-300 hover:text-orange-400 transition-colors">
                   Cart
                 </Link>
               </li>

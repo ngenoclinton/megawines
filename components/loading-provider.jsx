@@ -13,17 +13,19 @@ export default function LoadingProvider({ children }) {
     const timer = setTimeout(() => {
       setLoading(false)
 
-      // Force reveal animations after loading
-      setTimeout(() => {
-        const elements = document.querySelectorAll(
-          ".reveal-element, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade, .text-reveal",
-        )
-        elements.forEach((el) => {
-          if (el.getBoundingClientRect().top < window.innerHeight) {
-            el.classList.add("revealed")
-          }
-        })
-      }, 100)
+      // Force reveal animations after loading (only in browser)
+      if (typeof window !== "undefined") {
+        setTimeout(() => {
+          const elements = document.querySelectorAll(
+            ".reveal-element, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade, .text-reveal",
+          )
+          elements.forEach((el) => {
+            if (el.getBoundingClientRect().top < window.innerHeight) {
+              el.classList.add("revealed")
+            }
+          })
+        }, 100)
+      }
     }, 1000)
 
     return () => clearTimeout(timer)

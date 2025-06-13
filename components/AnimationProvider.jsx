@@ -12,26 +12,18 @@ export default function AnimationProvider({ children }) {
   const observerRef = useRef(null)
 
   useEffect(() => {
-    // Create intersection observer for scroll animations
+    // Ensure we're in the browser
+    if (typeof window === "undefined") return
+
     const timer = setTimeout(() => {
-      // First, make all elements visible as a fallback
-      const allElements = document.querySelectorAll(
-        ".reveal-element, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade, .text-reveal",
-      )
-
-      allElements.forEach((el) => {
-        // Set initial opacity to ensure elements are at least visible
-        el.style.opacity = "1"
-      })
-
-      // Then set up the observer for animations
+      // Create intersection observer for scroll animations
       observerRef.current = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add("revealed")
               // Once revealed, stop observing
-              observerRef.current.unobserve(entry.target)
+              observerRef.current?.unobserve(entry.target)
             }
           })
         },
@@ -42,8 +34,14 @@ export default function AnimationProvider({ children }) {
       )
 
       // Observe all elements with reveal classes
+      const allElements = document.querySelectorAll(
+        ".reveal-element, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade, .text-reveal",
+      )
+
       allElements.forEach((el) => {
-        observerRef.current.observe(el)
+        if (observerRef.current) {
+          observerRef.current.observe(el)
+        }
       })
 
       // Force reveal elements in viewport on load
@@ -72,6 +70,8 @@ export default function AnimationProvider({ children }) {
 
   // Function to manually trigger animations
   const triggerAnimation = (selector) => {
+    if (typeof window === "undefined") return
+
     const elements = document.querySelectorAll(selector)
     elements.forEach((el) => {
       el.classList.add("revealed")
