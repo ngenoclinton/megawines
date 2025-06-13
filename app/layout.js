@@ -4,7 +4,7 @@ import Footer from "../components/footer"
 import AnimationProvider from "@/components/AnimationProvider"
 import Script from "next/script"
 // import LoadingProvider from "@/components/loading-provider"
-  
+
 export const metadata = {
   title: "MegaWines - Fine Alcohol Importer in Kenya",
   description:
@@ -15,13 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased">
-        <LoadingProvider>
           <AnimationProvider>
             <Header />
             <main className="min-h-screen">{children}</main>
             <Footer />
           </AnimationProvider>
-        </LoadingProvider>
       </body>
     </html>
   )
