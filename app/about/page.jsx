@@ -148,7 +148,7 @@ export default function About() {
             <SimpleReveal delay={100}>
               <div className="gallery-item">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="https://galleria.co.ke/storage/2022/04/DSC_9418.jpg"
                   alt="MegaWines store interior"
                   width={400}
                   height={300}
@@ -164,7 +164,7 @@ export default function About() {
             <SimpleReveal delay={200}>
               <div className="gallery-item">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="https://galleria.co.ke/storage/2022/04/DSC_9479.jpg"
                   alt="Wine tasting event"
                   width={400}
                   height={300}
@@ -180,7 +180,7 @@ export default function About() {
             <SimpleReveal delay={300}>
               <div className="gallery-item">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_420/https://galleria.co.ke/storage/2022/04/DSC_9357-420x420.jpg"
                   alt="Premium spirits collection"
                   width={400}
                   height={300}

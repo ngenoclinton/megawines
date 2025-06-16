@@ -1,7 +1,16 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, ExternalLink, Award, Users, Star, MapPin, Clock, Phone } from "lucide-react"
-import SimpleReveal from "@/components/SimpleReveal"
+import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowRight,
+  ExternalLink,
+  Award,
+  Users,
+  Star,
+  MapPin,
+  Clock,
+  Phone,
+} from "lucide-react";
+import SimpleReveal from "@/components/SimpleReveal";
 
 export default function Home() {
   return (
@@ -43,13 +52,15 @@ export default function Home() {
 
             <div className="text-reveal mb-12">
               <p className="text-reveal-inner text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed hero-description">
-                Celebrating 25 years of excellence in importing the world's finest wines and spirits. Eight premium
-                locations serving Nairobi and Mombasa with unparalleled quality and sophistication.
+                Celebrating 25 years of excellence in importing the world's
+                finest wines and spirits. Eight premium locations serving
+                Nairobi and Mombasa with unparalleled quality and
+                sophistication.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center hero-buttons">
-              <Link
+              {/* <Link
                 href="https://thewhiskyshop.co.ke/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -57,25 +68,25 @@ export default function Home() {
               >
                 <span>Shop Premium Collection</span>
                 <ExternalLink className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </Link> */}
 
-              <Link
+              {/* <Link
                 href="/about"
                 className="group inline-flex items-center px-8 py-4 border-2 border-orange-400 text-orange-100 font-semibold rounded-full hover:bg-orange-400 hover:text-gray-900 transition-all duration-300"
               >
                 <span>Our Story</span>
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-orange-300 animate-bounce">
+        {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-orange-300 animate-bounce">
           <div className="w-6 h-10 border-2 border-orange-300 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-orange-300 rounded-full mt-2 animate-pulse"></div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Stats Section */}
@@ -87,7 +98,9 @@ export default function Home() {
                 <div className="w-20 h-20 bronze-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg hover-lift">
                   <Award className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="font-display text-4xl font-bold text-gray-900 mb-2">25+</h3>
+                <h3 className="font-display text-4xl font-bold text-gray-900 mb-2">
+                  25+
+                </h3>
                 <p className="text-gray-600 font-medium">Years of Excellence</p>
               </div>
             </SimpleReveal>
@@ -97,7 +110,9 @@ export default function Home() {
                 <div className="w-20 h-20 bronze-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg hover-lift">
                   <Users className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="font-display text-4xl font-bold text-gray-900 mb-2">8</h3>
+                <h3 className="font-display text-4xl font-bold text-gray-900 mb-2">
+                  8
+                </h3>
                 <p className="text-gray-600 font-medium">Premium Locations</p>
               </div>
             </SimpleReveal>
@@ -107,7 +122,9 @@ export default function Home() {
                 <div className="w-20 h-20 bronze-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg hover-lift">
                   <Star className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="font-display text-4xl font-bold text-gray-900 mb-2">1000+</h3>
+                <h3 className="font-display text-4xl font-bold text-gray-900 mb-2">
+                  1000+
+                </h3>
                 <p className="text-gray-600 font-medium">Premium Products</p>
               </div>
             </SimpleReveal>
@@ -122,19 +139,23 @@ export default function Home() {
             <SimpleReveal className="lg:pr-8">
               <div className="text-reveal mb-6">
                 <h2 className="text-reveal-inner font-display text-5xl font-bold text-gray-900">
-                  A Legacy of <span className="text-orange-600">Excellence</span>
+                  A Legacy of{" "}
+                  <span className="text-orange-600">Excellence</span>
                 </h2>
               </div>
               <SimpleReveal delay={100}>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Since 2000, MegaWines has been Kenya's distinguished importer of fine alcohol. The word "Mega" means
-                  "Large", and this is by no means an understatement.
+                  Since 2000, MegaWines has been Kenya's distinguished importer
+                  of fine alcohol. The word "Mega" means "Large", and this is by
+                  no means an understatement.
                 </p>
               </SimpleReveal>
               <SimpleReveal delay={200}>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  With eight state-of-the-art liquor shops and the magnificent Anuba Lounge, we have carefully expanded
-                  our value chain to serve Kenya's major cities with unparalleled quality and service.
+                  With eight state-of-the-art liquor shops and the magnificent
+                  Anuba Lounge, we have carefully expanded our value chain to
+                  serve Kenya's major cities with unparalleled quality and
+                  service.
                 </p>
               </SimpleReveal>
               <SimpleReveal delay={300}>
@@ -161,7 +182,7 @@ export default function Home() {
             <SimpleReveal>
               <div className="relative hover-lift">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src="https://galleria.co.ke/storage/2022/04/DSC_9501-2.jpg"
                   alt="MegaWines premium store interior"
                   width={600}
                   height={500}
@@ -181,9 +202,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <SimpleReveal>
-              <h2 className="font-display text-5xl font-bold text-gray-900 mb-4">Our Premium Spaces</h2>
+              <h2 className="font-display text-5xl font-bold text-gray-900 mb-4">
+                Our Premium Spaces
+              </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Experience luxury and sophistication at our carefully curated locations
+                Experience luxury and sophistication at our carefully curated
+                locations
               </p>
             </SimpleReveal>
           </div>
@@ -192,15 +216,19 @@ export default function Home() {
             <SimpleReveal delay={100}>
               <div className="gallery-item">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="https://galleria.co.ke/storage/2022/04/DSC_9357.jpg"
                   alt="Premium wine collection display"
                   width={400}
                   height={300}
                   className="w-full h-64 object-cover"
                 />
                 <div className="gallery-overlay">
-                  <h3 className="font-semibold text-xl mb-2">Wine Collection</h3>
-                  <p className="text-sm opacity-90">Curated selection from around the world</p>
+                  <h3 className="font-semibold text-xl mb-2">
+                    Wine Collection
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    Curated selection from around the world
+                  </p>
                 </div>
               </div>
             </SimpleReveal>
@@ -208,15 +236,19 @@ export default function Home() {
             <SimpleReveal delay={200}>
               <div className="gallery-item">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="https://galleria.co.ke/storage/2022/04/DSC_9371.jpg"
                   alt="Whisky and spirits section"
                   width={400}
                   height={300}
                   className="w-full h-64 object-cover"
                 />
                 <div className="gallery-overlay">
-                  <h3 className="font-semibold text-xl mb-2">Premium Spirits</h3>
-                  <p className="text-sm opacity-90">The finest whisky and spirits collection</p>
+                  <h3 className="font-semibold text-xl mb-2">
+                    Premium Spirits
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    The finest whisky and spirits collection
+                  </p>
                 </div>
               </div>
             </SimpleReveal>
@@ -224,7 +256,7 @@ export default function Home() {
             <SimpleReveal delay={300}>
               <div className="gallery-item">
                 <Image
-                  src="/placeholder.svg?height=300&width=400"
+                  src="https://galleria.co.ke/storage/2022/04/DSC_9349.jpg"
                   alt="Anuba Lounge interior"
                   width={400}
                   height={300}
@@ -232,7 +264,9 @@ export default function Home() {
                 />
                 <div className="gallery-overlay">
                   <h3 className="font-semibold text-xl mb-2">Anuba Lounge</h3>
-                  <p className="text-sm opacity-90">Experience luxury in our premium lounge</p>
+                  <p className="text-sm opacity-90">
+                    Experience luxury in our premium lounge
+                  </p>
                 </div>
               </div>
             </SimpleReveal>
@@ -322,10 +356,13 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <SimpleReveal>
-              <h2 className="font-display text-5xl font-bold text-white mb-6">Experience Premium Quality</h2>
+              <h2 className="font-display text-5xl font-bold text-white mb-6">
+                Experience Premium Quality
+              </h2>
               <p className="text-xl text-orange-100 leading-relaxed mb-12">
-                Discover our extensive collection of fine wines and premium spirits. Visit our stores or explore our
-                online catalog for the ultimate luxury experience.
+                Discover our extensive collection of fine wines and premium
+                spirits. Visit our stores or explore our online catalog for the
+                ultimate luxury experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link
@@ -350,5 +387,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }

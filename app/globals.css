@@ -13,22 +13,16 @@
   --gold-accent: #daa520;
 }
 
-/* * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-} */
+
 
 body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  color: var(--dark-brown);
-  background-color: var(--warm-white);
-  overflow-x: hidden;
+  color: #333;
 }
 
 .font-display {
-  /* font-family: "Playfair Display", serif; */
+  /* font-family: "Cormorant Garamond", serif; */
 }
 
 .font-serif {

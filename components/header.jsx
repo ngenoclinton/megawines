@@ -45,11 +45,11 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
               <Image
-                src="logo-chalk.png"
+                src="logo-bronze.png"
                 alt="MegaWines Logo"
-                width={200}
-                height={60}
-                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+                width={300}
+                height={70}
+                className="h-14 w-auto transition-transform duration-300 group-hover:scale-105 rounded-full"
                 priority
               />
             </div>
