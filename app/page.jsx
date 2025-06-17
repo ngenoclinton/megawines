@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="pt-24 lg:pt-20 relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/logo-bronze.png"
@@ -90,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-b from-orange-50 to-white">
+      <section className="pt-12 md:py-12 lg:py-24 bg-gradient-to-b from-orange-50 to-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <SimpleReveal delay={100}>
@@ -133,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* About Preview Section */}
-      <section className="py-24 bg-white">
+      <section className="pb-10 lg:pb-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <SimpleReveal className="lg:pr-8">

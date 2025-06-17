@@ -38,18 +38,18 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
-                  Privacy
+                <Link href="/about" className="text-gray-300 hover:text-orange-400 transition-colors">
+                  About Us.
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-orange-400 transition-colors">
-                  Information
+                <Link href="/about" className="text-gray-300 hover:text-orange-400 transition-colors">
+                  Information.
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-orange-400 transition-colors">
-                  Contact Us
+                  Contact Us.
                 </Link>
               </li>
               <li>
@@ -79,9 +79,9 @@ export default function Footer() {
 
         <SimpleReveal delay={300}>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">
+            <Link href='https://www.irobtechnologies.com/' target="_blank" className="text-gray-400">
               Powered by <span className="text-orange-400 font-medium">iRob Technologies</span>
-            </p>
+            </Link>
           </div>
         </SimpleReveal>
       </div>
