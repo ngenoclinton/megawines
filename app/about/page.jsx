@@ -248,7 +248,7 @@ export default function About() {
 
               <SimpleReveal delay={500}>
                 <TimelineItem
-                  year="2023"
+                  year="2025"
                   title="Today"
                   description="Eight state-of-the-art liquor shops across Nairobi and Mombasa, serving all of Kenya."
                   icon={<Award className="w-6 h-6" />}

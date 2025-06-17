@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-24 lg:pt-20 relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="t-24 lg:pt-20  relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/logo-bronze.png"
