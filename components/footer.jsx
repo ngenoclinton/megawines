@@ -118,9 +118,9 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+          <Link href="https://www.irobtechnologies.com/" className="text-gray-400">
             Powered by <span className="text-orange-400 font-medium">iRob Technologies</span>
-          </p>
+          </Link>
         </div>
       </div>
     </footer>
